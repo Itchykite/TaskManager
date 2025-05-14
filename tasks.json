@@ -26,5 +26,12 @@
     "description": "programowanie",
     "priority": 5,
     "status": "w trakcie"
+  },
+  {
+    "uuid": "73433183-7ab3-4aed-a06f-d94056d30726",
+    "name": "damn",
+    "description": "",
+    "priority": 4,
+    "status": "w trakcie"
   }
 ]

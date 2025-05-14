@@ -103,7 +103,12 @@ class TaskManager
             this.saveTasksToFile();
         }
     }
-    
+
+    uuidExists(uuid: string): boolean 
+    {
+        return this.tasks.some(task => task.uuid === uuid);
+    }
+
     getTasks()
     {
         return this.tasks;
@@ -189,6 +194,20 @@ while (true)
         const uuid = readlineSync.question("Podaj UUID zadania: ");
         const status = readlineSync.question("Podaj nowy status (oczekujące, w trakcie, zakończone): ");
 
+        if (!uuid)
+        {
+            console.log(chalk.red("UUID jest wymagane!"));
+            readlineSync.question("\nNaciśnij ENTER, aby wrócić...");
+            continue;
+        }
+
+        if (!taskManager.uuidExists(uuid))
+        {
+            console.log(chalk.red("Nie znaleziono zadania o podanym UUID!"));
+            readlineSync.question("\nNaciśnij ENTER, aby wrócić...");
+            continue;
+        }
+
         if (!["oczekujące", "w trakcie", "zakończone"].includes(status))
         {
             console.log(chalk.red("Nieprawidłowy status!"));
@@ -206,6 +225,21 @@ while (true)
     {
         console.clear();
         const uuid = readlineSync.question("Podaj UUID zadania do usunięcia: ");
+        
+        if (!uuid)
+        {
+            console.log(chalk.red("UUID jest wymagane!"));
+            readlineSync.question("\nNaciśnij ENTER, aby wrócić...");
+            continue;
+        }
+
+        if (!taskManager.uuidExists(uuid))
+        {
+            console.log(chalk.red("Nie znaleziono zadania o podanym UUID!"));
+            readlineSync.question("\nNaciśnij ENTER, aby wrócić...");
+            continue;
+        }
+
         taskManager.removeTask(uuid);
         console.log(chalk.green("Zadanie usunięte!"));
         readlineSync.question("\nNaciśnij ENTER, aby kontynuować...");
