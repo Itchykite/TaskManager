@@ -1,0 +1,30 @@
+[
+  {
+    "uuid": "0839e36d-8b8a-4b09-b31f-8a66e321df15",
+    "name": "test",
+    "description": "test",
+    "priority": 1,
+    "status": "zakończone"
+  },
+  {
+    "uuid": "df1f5132-d19c-4ce0-83d1-c3603dcb068e",
+    "name": "zadanie2",
+    "description": "pływanie",
+    "priority": 1,
+    "status": "oczekujące"
+  },
+  {
+    "uuid": "dd740a69-4aec-4712-b05a-2e4f5b176bc8",
+    "name": "zadanie 5",
+    "description": "bieganie",
+    "priority": 2,
+    "status": "oczekujące"
+  },
+  {
+    "uuid": "5741fb4f-9568-4e8f-881c-aea855554fb2",
+    "name": "zadanie 69",
+    "description": "programowanie",
+    "priority": 5,
+    "status": "w trakcie"
+  }
+]

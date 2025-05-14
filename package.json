@@ -1,0 +1,19 @@
+{
+  "name": "tst",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@types/node": "^22.15.18",
+    "chalk": "^5.4.1",
+    "readline-sync": "^1.4.10",
+    "uuid": "^11.1.0"
+  },
+  "keywords": []
+}
