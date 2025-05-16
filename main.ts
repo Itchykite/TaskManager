@@ -247,6 +247,7 @@ while (true)
 
     else if (choice === "5")
     {
+        console.clear();
         break;
     }
     else
